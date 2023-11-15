@@ -1,4 +1,4 @@
-{% set version = '0.6.0' %}
+{% set version = "0.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/NonCompart_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/NonCompart/NonCompart_{{ version }}.tar.gz
-  sha256: fb031e8d04f68e1392baf3bad12d4c005ba5a16330e93f06463dc7425a46aa31
+  sha256: ee9a5b67ee7e6f4cb794950d5128f45635b27a98e9554ee45cfe7e150ac03ab2
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -37,12 +37,8 @@ test:
 about:
   home: https://cran.r-project.org/package=NonCompart
   license: GPL-3.0-only
-  summary: 'Conduct a noncompartmental analysis with industrial strength. Some features are 1)
-    Use of CDISC SDTM terms 2) Automatic or manual slope selection 3) Supporting both
-    ''linear-up linear-down'' and ''linear-up log-down'' method 4) Interval(partial)
-    AUCs with ''linear'' or ''log'' interpolation method * Reference: Gabrielsson J,
-    Weiner D. Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications.
-    5th ed. 2016. (ISBN:9198299107).'
+  summary: 'Conduct a noncompartmental analysis with industrial strength. Some features are 1) Use of CDISC SDTM terms 2) Automatic or manual slope selection 3) Supporting both ''linear-up linear-down'' and ''linear-up log-down'' method 4) Interval(partial) AUCs with ''linear'' or ''log'' interpolation method * Reference:
+    Gabrielsson J, Weiner D. Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016. (ISBN:9198299107).'
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
