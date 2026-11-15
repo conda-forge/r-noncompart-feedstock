@@ -1,4 +1,4 @@
-{% set version = "0.8.4" %}
+{% set version = "0.8.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/NonCompart_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/NonCompart/NonCompart_{{ version }}.tar.gz
-  sha256: 95e88f05d71fb700a029fff9609cc83f17e47788e3c96460b8b35009900fce6d
+  sha256: e79fb26f7b44b65fc64e81c00ad74b19d478bbff15f786ba64839d671e676fb6
 
 build:
   number: 0
